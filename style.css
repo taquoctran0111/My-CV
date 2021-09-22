@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+body {
+  margin: 0px;
+  padding: 0px;
+}
+* {
+  box-sizing: border-box;
+  /* font-family: "Dancing Script", cursive; */
+  font-family: "Poppins", sans-serif;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0 5rem;
+  position: relative;
+  background-color: rgb(224, 233, 233);
+}
+
+/* Sidebar */
+.main .sidebar {
+  width: 25%;
+  height: 100vh;
+  background-color: rgb(168, 196, 196);
+  position: sticky;
+  /* position: -webkit-sticky; */
+  top: 0;
+}
+.main .sidebar .avatar {
+  width: 100%;
+  height: 45%;
+  padding: 10px;
+}
+.main .sidebar .avatar img {
+  width: 100%;
+  height: 100%;
+}
+.main .sidebar .menu ul li {
+  list-style-type: none;
+  margin: 15px auto;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.main .sidebar .menu ul li a {
+  text-decoration: none;
+  font-size: 23px;
+  color: rgb(31, 28, 28);
+  padding: 3px 25px;
+  clip-path: polygon(0% 0%, 91% 0, 100% 50%, 88% 100%, 0% 100%);
+  background-color: turquoise;
+}
+.main .sidebar .menu ul li::before {
+  content: " ";
+  width: 5px;
+  height: 15px;
+  background-color: rgb(207, 81, 81);
+  position: absolute;
+  left: 4px;
+  z-index: 1;
+}
+.main .sidebar .menu ul li a:hover {
+  transform: translateX(10px);
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+/* @keyframes move-menu {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 20px;
+  }
+} */
+.main .sidebar .menu ul li a:hover {
+  opacity: 0.5;
+}
+
+.main .content {
+  width: 68%;
+  height: 100%;
+}
+.child-content {
+  width: 100%;
+  height: 75vh;
+  margin: 30px auto;
+  background-color: rgb(168, 196, 196);
+  padding: 0px 20px;
+  border-radius: 10px;
+}
+
+/* Home */
+.home {
+  padding-left: 50px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home .information {
+  line-height: 25px;
+}
+.home .information h2 {
+  color: rgb(207, 81, 81);
+  font-size: 25px;
+}
+.home .information h1 {
+  color: rgb(38, 70, 70);
+  font-size: 40px;
+}
+.home .information .typing-text {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+.home .information .typing-text span {
+  margin-right: 10px;
+}
+.home .information .typing-text p {
+  font-size: 20px;
+  margin: 0px;
+  color: blueviolet;
+}
+.home .information .typing-text p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(168, 196, 196);
+  border-left: 2px solid gray;
+  animation: typing 3s steps(12) infinite;
+}
+@keyframes typing {
+  40%,
+  60% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+.home .bg-home {
+  width: 350px;
+  height: 350px;
+}
+.home .bg-home img {
+  width: 100%;
+  height: 100%;
+}
+.about {
+}
+
+.experience {
+}
+.project {
+}
